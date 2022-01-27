@@ -15,7 +15,7 @@ const ParkPageContext = createContext<T_ParkPageContext | undefined>(undefined);
 
 function useParkPageContext(): T_ParkPageContext {
   const context = useContext(ParkPageContext);
-  if (!context) throw new Error("Auth must be used within a location provider");
+  if (!context) throw new Error("Park hook must be used within a park page");
   return context;
 }
 
