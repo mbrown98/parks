@@ -8,7 +8,7 @@ export default function Home() {
   // NPS_API.fetchData("/parks?parkCode=abli");
   const loadData = useCallback(async () => {
     // handle the click event
-    await NPS_API.fetchData("/parks?parkCode=redw")
+    await NPS_API.fetchData("/parks?parkCode=yell")
       .then((res) => {
         if (!res) throw Error("No Res");
 
@@ -22,27 +22,34 @@ export default function Home() {
   }, []);
 
   const mainImgUrl = parkData ? parkData.images[0].url : "";
-  console.log(mainImgUrl);
+  const parkName = parkData ? parkData.fullName : "";
+
   return (
     <SafeAreaView style={styles.pageContain}>
-      <View
-        style={{
-          display: "flex",
-          alignItems: "center",
-          justifyContent: "center",
-          padding: "2.5%",
-          height: 400,
-          width: "100%",
-        }}
-      >
-        <ImageBackground
-          source={{
-            uri: mainImgUrl,
+      <View style={{ flex: 1, padding: "2.5%" }}>
+        <View
+          style={{
+            display: "flex",
+            alignItems: "center",
+            justifyContent: "center",
+            height: 400,
+            width: "100%",
           }}
-          resizeMode="cover"
-          style={styles.bgImg}
-          imageStyle={{ borderRadius: 10 }}
-        ></ImageBackground>
+        >
+          <ImageBackground
+            source={{
+              uri: mainImgUrl,
+            }}
+            resizeMode="cover"
+            style={styles.bgImg}
+            imageStyle={{ borderRadius: 10 }}
+          ></ImageBackground>
+        </View>
+        <View style={{ marginTop: 15 }}>
+          <Text style={{ fontFamily: "JosefinSans_500Medium", fontSize: 30 }}>
+            {parkName}
+          </Text>
+        </View>
       </View>
     </SafeAreaView>
   );
