@@ -6,7 +6,14 @@ import styles from "./Home.styles";
 export default function Home() {
   return (
     <SafeAreaView style={{ flex: 1 }}>
-      <Text>Hi</Text>
+      <View style={styles.header}>
+        <View style={styles.headerText}>
+          <Text>Where do you want to go?</Text>
+        </View>
+        <View>
+          <Text>U</Text>
+        </View>
+      </View>
     </SafeAreaView>
   );
 }
