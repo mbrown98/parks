@@ -1,8 +1,12 @@
-import React from "react";
+import React, { useEffect } from "react";
 import { View, Text, ImageBackground } from "react-native";
+import { NPS_API } from "../../api";
 import styles from "./Home.styles";
 
 export default function Home() {
+  useEffect(() => {
+    NPS_API.getParks();
+  }, []);
   return (
     <View style={styles.pageContain}>
       <ImageBackground
