@@ -1,12 +1,13 @@
-import { StyleSheet } from "react-native";
+import { StyleSheet, Dimensions } from "react-native";
+const screen = Dimensions.get("screen");
 
 const styles = StyleSheet.create({
   pageContain: {
     flex: 1,
   },
   bgImg: {
-    flex: 1,
-    opacity: 0.6,
+    height: "100%",
+    width: "100%",
   },
 });
 
