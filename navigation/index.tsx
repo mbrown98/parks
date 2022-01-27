@@ -19,6 +19,7 @@ import useColorScheme from "../hooks/useColorScheme";
 import Home from "../screens/Home/Home";
 import ModalScreen from "../screens/ModalScreen";
 import NotFoundScreen from "../screens/NotFoundScreen";
+import Park from "../screens/Park/Park";
 import TabOneScreen from "../screens/TabOneScreen";
 import TabTwoScreen from "../screens/TabTwoScreen";
 import {
@@ -81,7 +82,7 @@ function BottomTabNavigator() {
 
   return (
     <BottomTab.Navigator
-      initialRouteName="TabOne"
+      initialRouteName="Home"
       screenOptions={{
         tabBarActiveTintColor: Colors[colorScheme].tint,
       }}
@@ -92,10 +93,19 @@ function BottomTabNavigator() {
         options={{
           headerShown: false,
           title: "Home",
-          tabBarIcon: ({ color }) => <TabBarIcon name="code" color={color} />,
+          tabBarIcon: ({ color }) => <TabBarIcon name="home" color={color} />,
         }}
       />
       <BottomTab.Screen
+        name="Park"
+        component={Park}
+        options={{
+          headerShown: false,
+          title: "Park",
+          tabBarIcon: ({ color }) => <TabBarIcon name="meetup" color={color} />,
+        }}
+      />
+      {/* <BottomTab.Screen
         name="TabOne"
         component={TabOneScreen}
         options={({ navigation }: RootTabScreenProps<"TabOne">) => ({
@@ -125,7 +135,7 @@ function BottomTabNavigator() {
           title: "Tab Two",
           tabBarIcon: ({ color }) => <TabBarIcon name="code" color={color} />,
         }}
-      />
+      /> */}
     </BottomTab.Navigator>
   );
 }
