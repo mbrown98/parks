@@ -8,7 +8,7 @@ export default function Home() {
   // NPS_API.fetchData("/parks?parkCode=abli");
   const loadData = useCallback(async () => {
     // handle the click event
-    await NPS_API.fetchData("/parks?parkCode=yell")
+    await NPS_API.fetchData("/parks?parkCode=olym")
       .then((res) => {
         if (!res) throw Error("No Res");
 
@@ -20,8 +20,9 @@ export default function Home() {
   useEffect(() => {
     loadData();
   }, []);
+  console.log(parkData.images[1]);
 
-  const mainImgUrl = parkData ? parkData.images[0].url : "";
+  const mainImgUrl = parkData ? parkData.images[1].url : "";
   const parkName = parkData ? parkData.fullName : "";
 
   return (
