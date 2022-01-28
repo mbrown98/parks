@@ -16,6 +16,7 @@ export default function ParkImageSlide() {
   if (!parkData) return null;
 
   const parkImages: any = parkData.images;
+  console.log(parkImages[selectedImage]);
 
   return (
     <View

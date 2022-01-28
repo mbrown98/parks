@@ -60,6 +60,11 @@ function RootNavigator() {
         options={{ headerShown: false }}
       />
       <Stack.Screen
+        name="Park"
+        component={Park}
+        options={{ headerShown: false }}
+      />
+      <Stack.Screen
         name="NotFound"
         component={NotFoundScreen}
         options={{ title: "Oops!" }}
@@ -106,7 +111,7 @@ function BottomTabNavigator() {
           tabBarIcon: ({ color }) => <TabBarIcon name="star" color={color} />,
         }}
       />
-      <BottomTab.Screen
+      {/* <BottomTab.Screen
         name="Park"
         component={Park}
         options={{
@@ -114,7 +119,7 @@ function BottomTabNavigator() {
           title: "DEV",
           tabBarIcon: ({ color }) => <TabBarIcon name="code" color={color} />,
         }}
-      />
+      /> */}
       {/* <BottomTab.Screen
         name="TabOne"
         component={TabOneScreen}

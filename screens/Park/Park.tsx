@@ -7,10 +7,10 @@ import ParkMap from "./components/ParkMap/ParkMap";
 import styles from "./Park.styles";
 import { ParkPageProvider, useParkPageContext } from "./context/ParkContext";
 import { NativeStackNavigationProp } from "@react-navigation/native-stack";
-import { RootTabParamList } from "../../types";
+import { RootStackParamList, RootTabParamList } from "../../types";
 
 type ParkProps = {
-  navigation: NativeStackNavigationProp<RootTabParamList, "Park">;
+  navigation: NativeStackNavigationProp<RootStackParamList, "Park">;
 };
 
 export default function Park({ navigation }: ParkProps): React.ReactElement {
