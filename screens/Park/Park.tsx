@@ -6,13 +6,14 @@ import ParkImageSlide from "./components/ParkImageSlide/ParkImageSlide";
 import ParkMap from "./components/ParkMap/ParkMap";
 import styles from "./Park.styles";
 import { ParkPageProvider, useParkPageContext } from "./context/ParkContext";
+import { NativeStackNavigationProp } from "@react-navigation/native-stack";
+import { RootTabParamList } from "../../types";
 
-export default function Park() {
-  // const { parkData } = useParkPageContext();
-  // const mainImgUrl = parkData ? parkData.images[2].url : "";
-  // console.log(mainImgUrl);
-  // const parkName = parkData ? parkData.fullName : "";
+type ParkProps = {
+  navigation: NativeStackNavigationProp<RootTabParamList, "Park">;
+};
 
+export default function Park({ navigation }: ParkProps): React.ReactElement {
   return (
     <ParkPageProvider>
       <SafeAreaView style={styles.pageContain}>

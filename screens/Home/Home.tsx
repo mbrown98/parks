@@ -11,8 +11,14 @@ import { NPS_API } from "../../api";
 import ParkPreviewCard from "./components/ParkPreviewCard/ParkPreviewCard";
 import styles from "./Home.styles";
 import { HomePageProvider } from "./context/HomeContext";
+import { NativeStackNavigationProp } from "@react-navigation/native-stack";
+import { RootTabParamList } from "../../types";
 
-export default function Home() {
+type HomeProps = {
+  navigation: NativeStackNavigationProp<RootTabParamList, "Home">;
+};
+
+export default function Home({ navigation }: HomeProps): React.ReactElement {
   return (
     <HomePageProvider>
       <SafeAreaView style={{ flex: 1 }}>
