@@ -26,7 +26,7 @@ const ParkPageProvider = (props: {
 
   const loadData = useCallback(async () => {
     // handle the click event
-    await NPS_API.fetchData("/parks?parkCode=alpo")
+    await NPS_API.fetchData("/parks?parkCode=deva")
       .then((res) => {
         if (!res) throw Error("No Res");
 

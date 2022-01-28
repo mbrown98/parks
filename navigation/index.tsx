@@ -16,6 +16,7 @@ import { ColorSchemeName, Pressable } from "react-native";
 
 import Colors from "../constants/Colors";
 import useColorScheme from "../hooks/useColorScheme";
+import Favorites from "../screens/Favorites/Favorites";
 import Home from "../screens/Home/Home";
 import ModalScreen from "../screens/ModalScreen";
 import NotFoundScreen from "../screens/NotFoundScreen";
@@ -97,12 +98,21 @@ function BottomTabNavigator() {
         }}
       />
       <BottomTab.Screen
+        name="Favorites"
+        component={Favorites}
+        options={{
+          headerShown: false,
+          title: "Favorites",
+          tabBarIcon: ({ color }) => <TabBarIcon name="star" color={color} />,
+        }}
+      />
+      <BottomTab.Screen
         name="Park"
         component={Park}
         options={{
           headerShown: false,
-          title: "Park",
-          tabBarIcon: ({ color }) => <TabBarIcon name="meetup" color={color} />,
+          title: "DEV",
+          tabBarIcon: ({ color }) => <TabBarIcon name="code" color={color} />,
         }}
       />
       {/* <BottomTab.Screen
