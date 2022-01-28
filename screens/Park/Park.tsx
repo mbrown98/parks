@@ -18,6 +18,7 @@ export default function Park() {
       <SafeAreaView style={styles.pageContain}>
         <View style={{ flex: 1, padding: "2.5%" }}>
           <ParkImageSlide />
+          <View style={{ height: 10 }} />
           <ParkBaseInfo />
           <ParkMap />
         </View>

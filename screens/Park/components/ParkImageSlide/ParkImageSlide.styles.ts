@@ -8,6 +8,7 @@ const styles = StyleSheet.create({
   bgImg: {
     height: "100%",
     width: "100%",
+    position: "relative",
   },
 });
 

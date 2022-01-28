@@ -23,10 +23,10 @@ const ParkPageProvider = (props: {
   children: React.ReactNode;
 }): React.ReactElement => {
   const [parkData, setParkData] = useState<any>(null);
-  // NPS_API.fetchData("/parks?parkCode=abli");
+
   const loadData = useCallback(async () => {
     // handle the click event
-    await NPS_API.fetchData("/parks?parkCode=olym")
+    await NPS_API.fetchData("/parks?parkCode=alpo")
       .then((res) => {
         if (!res) throw Error("No Res");
 
