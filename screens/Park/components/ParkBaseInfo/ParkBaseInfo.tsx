@@ -1,6 +1,6 @@
 import React from "react";
 import { View, Text } from "react-native";
-import { useParkPageContext } from "../../ParkContext";
+import { useParkPageContext } from "../../context/ParkContext";
 
 export default function ParkBaseInfo() {
   const { parkData } = useParkPageContext();

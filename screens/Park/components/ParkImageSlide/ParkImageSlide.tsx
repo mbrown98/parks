@@ -7,7 +7,7 @@ import {
   Image,
   TouchableOpacity,
 } from "react-native";
-import { useParkPageContext } from "../../ParkContext";
+import { useParkPageContext } from "../../context/ParkContext";
 import styles from "./ParkImageSlide.styles";
 
 export default function ParkImageSlide() {

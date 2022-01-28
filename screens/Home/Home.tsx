@@ -10,23 +10,9 @@ import { Searchbar } from "react-native-paper";
 import { NPS_API } from "../../api";
 import ParkPreviewCard from "./components/ParkPreviewCard/ParkPreviewCard";
 import styles from "./Home.styles";
-import { HomePageProvider } from "./HomeContext";
+import { HomePageProvider } from "./context/HomeContext";
 
 export default function Home() {
-  const loadData = useCallback(async () => {
-    // handle the click event
-    await NPS_API.fetchData("/activities/parks?limit=83")
-      .then((res) => {
-        if (!res) throw Error("No Res");
-        const data = res.data.map((opt) => opt.name);
-        console.log("res", data);
-      })
-      .catch((e) => console.log("e", e));
-  }, []);
-
-  useEffect(() => {
-    loadData();
-  }, []);
   return (
     <HomePageProvider>
       <SafeAreaView style={{ flex: 1 }}>

@@ -5,7 +5,7 @@ import React, {
   useEffect,
   useCallback,
 } from "react";
-import { NPS_API } from "../../api";
+import { NPS_API } from "../../../api";
 
 type T_ParkPageContext = {
   parkData: any;
@@ -26,7 +26,7 @@ const ParkPageProvider = (props: {
 
   const loadData = useCallback(async () => {
     // handle the click event
-    await NPS_API.fetchData("/parks?parkCode=deva")
+    await NPS_API.fetchData("/parks?parkCode=yose")
       .then((res) => {
         if (!res) throw Error("No Res");
 

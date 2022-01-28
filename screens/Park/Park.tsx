@@ -5,7 +5,7 @@ import ParkBaseInfo from "./components/ParkBaseInfo/ParkBaseInfo";
 import ParkImageSlide from "./components/ParkImageSlide/ParkImageSlide";
 import ParkMap from "./components/ParkMap/ParkMap";
 import styles from "./Park.styles";
-import { ParkPageProvider, useParkPageContext } from "./ParkContext";
+import { ParkPageProvider, useParkPageContext } from "./context/ParkContext";
 
 export default function Park() {
   // const { parkData } = useParkPageContext();
