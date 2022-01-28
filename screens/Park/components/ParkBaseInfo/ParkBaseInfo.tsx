@@ -4,7 +4,7 @@ import { useParkPageContext } from "../../context/ParkContext";
 
 export default function ParkBaseInfo() {
   const { parkData } = useParkPageContext();
-  console.log("park data", parkData);
+
   const parkName = parkData ? parkData.fullName : "";
   return (
     <View>
